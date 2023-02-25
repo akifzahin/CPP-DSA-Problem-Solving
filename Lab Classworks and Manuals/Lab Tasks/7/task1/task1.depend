@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1677365123 source:c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\7\task1\complex.cpp
+	"complex.h"
+	<iostream>
+
+1677365137 c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\7\task1\complex.h
+
+1677365130 source:c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\7\task1\main.cpp
+	<iostream>
+	"complex.cpp"
+
+1677365123 c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\7\task1\complex.cpp
+	"complex.h"
+	<iostream>
+

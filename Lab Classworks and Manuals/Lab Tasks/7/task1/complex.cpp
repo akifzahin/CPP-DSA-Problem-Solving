@@ -19,8 +19,31 @@ Complex Complex::operator+(Complex a)
     t.Imaginary = Imaginary + a.Imaginary;
     return t;
 }
+
+Complex Complex::operator-(Complex a)
+{
+    Complex t;
+    t.Real = Real - a.Real;
+    t.Imaginary = Imaginary - a.Imaginary;
+    return t;
+}
+Complex Complex::operator*(Complex a)
+{
+    Complex t;
+    t.Real = (Real*a.Real) - (Imaginary*a.Imaginary);
+    t.Imaginary = (Real*a.Imaginary) + (Imaginary*a.Real);
+    return t;
+}
+bool Complex::operator!=(Complex a)
+{
+    bool notEqual = false;
+    if(Real == a.Real && Imaginary == a.Imaginary)
+    {
+        notEqual = true;
+    }
+    return notEqual;
+}
 void Complex::Print()
 {
-    cout << Real << endl;
-    cout << Imaginary << endl;
+   cout<<Real<<" + "<<Imaginary<<"i\n";
 }

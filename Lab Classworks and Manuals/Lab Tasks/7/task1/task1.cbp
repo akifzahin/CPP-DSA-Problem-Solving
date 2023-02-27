@@ -35,10 +35,6 @@
 		<Unit filename="complex.cpp" />
 		<Unit filename="complex.h" />
 		<Unit filename="main.cpp" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -4,17 +4,11 @@ using namespace std;
 
 int main()
 {
-   UnsortedType<int> myList;
-    int n;
-    while(1)
+    UnsortedType<int> myList();
+    int n=5,input;
+    for(int i=0; i<n; i++)
     {
-
-        myList.InsertItem(n);
-        if(n<0)
-        {
-            break;
-        }
-
+        myList.InsertItem(input);
     }
 
 }

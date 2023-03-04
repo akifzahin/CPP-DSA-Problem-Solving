@@ -9,7 +9,7 @@ UnsortedType<ItemType>::UnsortedType()
 template <class ItemType>
 void UnsortedType<ItemType>::MakeEmpty()
 {
-  length = 0;
+    length = 0;
 }
 template <class ItemType>
 bool UnsortedType<ItemType>::IsFull()
@@ -29,17 +29,17 @@ void UnsortedType<ItemType>::ResetList()
 template <class ItemType>
 void
 UnsortedType<ItemType>::GetNextItem(ItemType&
-item)
+                                    item)
 {
     currentPos++;
     item = info [currentPos] ;
 }
 template <class ItemType>
-void
+int
 UnsortedType<ItemType>::RetrieveItem(ItemType&
-item, bool &found)
+                                     item, bool &found)
 {
-    int location = 0;
+    int location = 0,foundLocation=0;
     bool moreToSearch = (location < length);
     found = false;
     while (moreToSearch && !found)
@@ -47,7 +47,8 @@ item, bool &found)
         if(item == info[location])
         {
             found = true;
-            item = info[location];
+            foundLocation = location;
+            //item = info[location];
         }
         else
         {
@@ -58,18 +59,25 @@ item, bool &found)
 }
 template <class ItemType>
 void UnsortedType<ItemType>::InsertItem(ItemType
-item)
+                                        item)
 {
-    info[length] = item;
-    length++;
+    if(IsFull() == true)
+    {
+        info[length] = item;
+        length++;
+    }
+    else
+    {
+        cout<<"LIST IS FULL!";
+    }
 }
 template <class ItemType>
 void UnsortedType<ItemType>::DeleteItem(ItemType
-item)
+                                        item)
 {
     int location = 0;
-    while (item != info[location])
-        location++;
+        while (item != info[location])
+            location++;
     info[location] = info[length - 1];
     length--;
 }

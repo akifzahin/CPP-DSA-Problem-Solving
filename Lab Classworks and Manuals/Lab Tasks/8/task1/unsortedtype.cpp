@@ -1,4 +1,6 @@
 #include "UnsortedType.h"
+#include <iostream>
+using namespace std;
 
 template <class ItemType>
 UnsortedType<ItemType>::UnsortedType()
@@ -56,28 +58,42 @@ UnsortedType<ItemType>::RetrieveItem(ItemType&
             moreToSearch = (location < length);
         }
     }
+    return foundLocation;
 }
 template <class ItemType>
 void UnsortedType<ItemType>::InsertItem(ItemType
                                         item)
 {
-    if(IsFull() == true)
+    bool full = IsFull();
+    if(full == true)
     {
-        info[length] = item;
-        length++;
+        cout<<"LIST IS FULL!\n";
     }
     else
     {
-        cout<<"LIST IS FULL!";
+
+        info[length] = item;
+        length++;
     }
 }
 template <class ItemType>
 void UnsortedType<ItemType>::DeleteItem(ItemType
                                         item)
 {
-    int location = 0;
+    bool found;
+    int foundLocation = RetrieveItem(item,found);
+    if(foundLocation!=0)
+    {
+        int location = 0;
         while (item != info[location])
             location++;
     info[location] = info[length - 1];
     length--;
+    }
+    else
+    {
+        cout<<"\nItem NOT FOUND!\n";
+
+    }
+
 }

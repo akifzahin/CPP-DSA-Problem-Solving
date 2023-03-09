@@ -1,6 +1,16 @@
 # depslib dependency file v1.0
-1677968810 source:c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\8\task1\unsortedtype.cpp
+1678401575 source:c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\8\task1\unsortedtype.cpp
 	"UnsortedType.h"
+	<iostream>
 
-1677794731 c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\8\task1\unsortedtype.h
+1678399135 c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\8\task1\unsortedtype.h
+
+1678401575 source:c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\8\task1\main.cpp
+	<iostream>
+	"unsortedtype.h"
+	"unsortedtype.cpp"
+
+1678401575 c:\users\lib602ip98\3d objects\akif zahin\cpp-dsa-problem-solving\lab classworks and manuals\lab tasks\8\task1\unsortedtype.cpp
+	"UnsortedType.h"
+	<iostream>
 

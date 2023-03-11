@@ -80,20 +80,20 @@ template <class ItemType>
 void UnsortedType<ItemType>::DeleteItem(ItemType
                                         item)
 {
-    bool found;
-    int foundLocation = RetrieveItem(item,found);
-    if(foundLocation!=0)
-    {
+    //bool found;
+    //int foundLocation = RetrieveItem(item,found);
+    //if(foundLocation!=0)
+    //{
         int location = 0;
         while (item != info[location])
             location++;
-    info[location] = info[length - 1];
-    length--;
-    }
-    else
-    {
-        cout<<"\nItem NOT FOUND!\n";
+        info[location] = info[length - 1];
+        length--;
+   // }
+    //else
+    //{
+        //cout<<"\nItem NOT FOUND!\n";
 
-    }
+    //}
 
 }

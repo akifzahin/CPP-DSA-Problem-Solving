@@ -2,7 +2,6 @@
 #include "unsortedtype.h"
 #include "unsortedtype.cpp"
 using namespace std;
-
 int main()
 {
     UnsortedType<int> myList;
@@ -125,6 +124,17 @@ int main()
         cout<<"\nList is NOT FULL!\n";
     }
 
+    myList.ResetList();
+
+    cout<<"Printing items: \n";
+    int size3 = myList.LengthIs();
+    int n4;
+    for(int i=0; i<size3; i++)
+    {
+        myList.GetNextItem(n4);
+        cout<<n4<<" ";
+
+    }
 
 
 

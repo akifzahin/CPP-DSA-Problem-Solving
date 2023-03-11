@@ -1,4 +1,6 @@
 #include "sortedtype.h"
+#include <iostream>
+using namespace std;
 template <class ItemType>
 SortedType<ItemType>::SortedType()
 {
@@ -73,7 +75,7 @@ template <class ItemType>
 int SortedType<ItemType>::RetrieveItem(ItemType&
                                         item, bool& found)
 {
-    int midPoint, first = 0, last = length - 1,foundLocation;
+    int midPoint, first = 0, last = length - 1,foundLocation=-1;
     bool moreToSearch = (first <= last);
     found = false;
     while (moreToSearch && !found)

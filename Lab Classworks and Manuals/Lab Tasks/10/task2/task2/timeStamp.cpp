@@ -46,7 +46,7 @@ void timeStamp::InsertItem(int s, int m, int h)
             location++;
             moreToSearch = (location < length);
         }
-        else if(s < seconds[location] && m < minutes[location] && h < hours[location])
+        else if(s < ss && m < mm && h < hh)
             moreToSearch = false;
     }
     for (int index = length; index > location; index--)

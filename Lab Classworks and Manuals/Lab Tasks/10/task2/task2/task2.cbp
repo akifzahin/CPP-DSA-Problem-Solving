@@ -32,11 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../../../8/task1/unsortedtype.cpp" />
+		<Unit filename="../../../8/task1/unsortedtype.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="timeStamp.cpp" />
 		<Unit filename="timeStamp.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

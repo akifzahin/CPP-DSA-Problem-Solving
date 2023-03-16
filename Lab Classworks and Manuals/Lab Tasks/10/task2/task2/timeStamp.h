@@ -5,13 +5,11 @@ class timeStamp
 {
 private:
     int length;
-    int seconds[MAX_ITEMS];
-    int minutes[MAX_ITEMS];
-    int hours[MAX_ITEMS];
+    int ss,mm,hh;
     int currentPos;
 
 public :
-    timeStamp();
+    timeStamp(int,int,int);
     void MakeEmpty();
     bool IsFull();
     int LengthIs();

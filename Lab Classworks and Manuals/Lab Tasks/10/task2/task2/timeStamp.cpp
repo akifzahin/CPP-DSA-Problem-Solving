@@ -2,8 +2,11 @@
 #include <iostream>
 using namespace std;
 
-timeStamp::timeStamp()
+timeStamp::timeStamp(int s, int m, int h)
 {
+    ss = s;
+    mm = m;
+    hh = h;
     length = 0;
     currentPos = - 1;
 }
@@ -27,9 +30,9 @@ void
 timeStamp::GetNextItem(int& s, int& m, int& h)
 {
     currentPos++;
-    s = seconds[currentPos];
-    m = minutes[currentPos];
-    h = hours[currentPos];
+    s = ss;
+    m = mm;
+    h = hh;
 }
 void timeStamp::InsertItem(int s, int m, int h)
 {
@@ -38,7 +41,7 @@ void timeStamp::InsertItem(int s, int m, int h)
 
     while (moreToSearch)
     {
-        if(s > seconds[location] && m > minutes[location] && h > hours[location])
+        if(s >ss && m > mm && h >hh)
         {
             location++;
             moreToSearch = (location < length);
@@ -104,7 +107,7 @@ void timeStamp::PrintList()
 {
     for(int i=0; i<length; i++)
     {
-        cout<<"Student "<<i+1<<":";
+        cout<<"Time"<<i+1<<":";
         cout<<seconds[i]<<" "<<minutes[i]<<" "<<hours[i]<<"\n";
     }
 }

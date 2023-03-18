@@ -1,21 +1,33 @@
 #include <iostream>
 #include "timeStamp.h"
-
-
+#include "unsortedtype.h"
 using namespace std;
 
 int main()
 {
-    timeStamp timeStamps;
+    UnsortedType<timeStamp> timeStamps;
 
-    timeStamps.InsertItem(15,34,23);
-    timeStamps.InsertItem(13,13,02);
-    timeStamps.InsertItem(43,45,12);
-    timeStamps.InsertItem(25,36,17);
-    timeStamps.InsertItem(52,02,20);
+    timeStamp t1(15,34,23);
+    timeStamp t2(13,13,02);
+    timeStamp t3(43,45,12);
+    timeStamp t4(25,36,17);
+    timeStamp t5(52,02,20);
 
-    timeStamps.DeleteItem(25,36,17);
+    timeStamps.InsertItem(t1);
+    timeStamps.InsertItem(t2);
+    timeStamps.InsertItem(t3);
+    timeStamps.InsertItem(t4);
+    timeStamps.InsertItem(t5);
 
-    timeStamps.PrintList();
+    timeStamps.DeleteItem(t4);
+
+   timeStamp temp(0,0,0);
+   bool found;
+
+   for(int i=0; i<5; i++)
+   {
+       timeStamps.RetrieveItem(temp,found);
+       temp.printTime();
+   }
 
 }

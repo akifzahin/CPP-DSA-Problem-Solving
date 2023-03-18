@@ -35,6 +35,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="timeStamp.cpp" />
 		<Unit filename="timeStamp.h" />
+		<Unit filename="unsortedtype.cpp" />
+		<Unit filename="unsortedtype.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

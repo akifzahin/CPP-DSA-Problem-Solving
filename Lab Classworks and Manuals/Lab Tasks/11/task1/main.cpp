@@ -44,37 +44,38 @@ int main()
 
     //Merging and Sorting
     int temp1,temp2;
+    list1.GetNextItem(temp1);
+    list2.GetNextItem(temp2);
+
     for(int i=0; i<m+n; i++)
     {
-          list1.GetNextItem(temp1);
-          list2.GetNextItem(temp2);
 
-          if(temp1<temp2)
-          {
-                resultList.InsertItem(temp1);
-                list1.GetNextItem(temp1);
-          }
-          else if(temp1>temp2)
-          {
-              resultList.InsertItem(temp2);
-              list1.GetNextItem(temp2);
-          }
-          else
-          {
-              resultList.InsertItem(temp1);
-              list1.GetNextItem(temp1);
-              list2.GetNextItem(temp2);
+        if(temp1<temp2)
+        {
+            resultList.InsertItem(temp1);
+            list1.GetNextItem(temp1);
+        }
+        else if(temp1>temp2)
+        {
+            resultList.InsertItem(temp2);
+            list1.GetNextItem(temp2);
+        }
+        else
+        {
+            resultList.InsertItem(temp1);
+            list1.GetNextItem(temp1);
+            list2.GetNextItem(temp2);
 
-          }
+        }
     }
 
 
 
     int resultNum;
     cout<<"Printing values: ";
-    for(int i=0; i<m; i++)
+    for(int i=0; i<m+n; i++)
     {
-        list1.GetNextItem(resultNum);
+       resultList.GetNextItem(resultNum);
         cout<<resultNum<<" ";
     }
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "timeStamp.h"
 #include "unsortedtype.h"
+#include "unsortedtype.cpp"
 using namespace std;
 
 int main()
@@ -19,7 +20,7 @@ int main()
     timeStamps.InsertItem(t4);
     timeStamps.InsertItem(t5);
 
-    timeStamps.DeleteItem(t4);
+//    timeStamps.DeleteItem(t4);
 
    timeStamp temp(0,0,0);
    bool found;

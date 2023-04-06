@@ -1,9 +1,9 @@
-#include "unsortedLinkedList.h"
+#include "LinkedList.h"
 #include <bits/stdc++.h>
 using namespace std;
 
 template <class T>
-UnsortedLinkedList<T>::UnsortedLinkedList()
+LinkedList<T>::UnsortedLinkedList()
 {
     lengthOfList = 0;
     currentIndex = -1;
@@ -11,19 +11,19 @@ UnsortedLinkedList<T>::UnsortedLinkedList()
 }
 
 template <class T>
-int UnsortedLinkedList<T>::GetLength()
+int LinkedList<T>::GetLength()
 {
     return lengthOfList;
 }
 
 template <class T>
-int UnsortedLinkedList<T>::GetCurrentIndex()
+int LinkedList<T>::GetCurrentIndex()
 {
     return currentIndex;
 }
 
 template <class T>
-bool UnsortedLinkedList<T>::FullCheck()
+bool LinkedList<T>::FullCheck()
 {
     bool created;
     Node<T>* temp;
@@ -41,13 +41,13 @@ bool UnsortedLinkedList<T>::FullCheck()
 }
 
 template <class T>
-bool UnsortedLinkedList<T>::EmptyCheck()
+bool LinkedList<T>::EmptyCheck()
 {
     return (head == NULL);
 }
 
 template <class T>
-void UnsortedLinkedList<T>::InsertNode(int index,T value)
+void LinkedList<T>::InsertNode(int index,T value)
 {
 //    Node<T>* temp = new Node<T>;
 //    if(index<0)
@@ -96,7 +96,7 @@ void UnsortedLinkedList<T>::InsertNode(int index,T value)
 
 }
 template <class T>
-void UnsortedLinkedList<T>::DeleteNode(T value)
+void LinkedList<T>::DeleteNode(T value)
 {
 
 }

@@ -3,7 +3,7 @@
 const int maxSize = 6;
 
 template <class T>
-class UnsortedListArray
+class ListArray
 {
 private:
 
@@ -11,8 +11,8 @@ private:
     T elements[maxSize];
     int currentIndex;
 public:
-    UnsortedListArray();
-    ~UnsortedListArray();
+    ListArray();
+    ~ListArray();
 
     void GetElement(T&);
     int GetElementIndex(T&);
@@ -26,7 +26,7 @@ public:
     void MakeEmpty();
 
     void SumList();
-    UnsortedListArray operator+(UnsortedListArray);
+   ListArray operator+(UnsortedListArray);
 
 
 

@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="UnsortedList(LinkedList)" />
+		<Option title="LinkedList" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -32,11 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="LinkedList.cpp" />
+		<Unit filename="LinkedList.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="node.cpp" />
 		<Unit filename="node.h" />
-		<Unit filename="unsortedLinkedList.cpp" />
-		<Unit filename="unsortedLinkedList.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

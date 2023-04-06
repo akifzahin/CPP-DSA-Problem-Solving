@@ -1,8 +1,9 @@
-#ifndef UNSORTEDLINKEDLIST_H_INCLUDED
-#define UNSORTEDLINKEDLIST_H_INCLUDED
+#ifndef LINKEDLIST_H_INCLUDED
+#define LINKEDLIST_H_INCLUDED
 #include "node.h"
+
 template <class T>
-class UnsortedLinkedList
+class LinkedList
 {
 
 
@@ -11,8 +12,8 @@ private:
     int lengthOfList;
     int currentIndex;
 public:
-    UnsortedLinkedList();
-    ~UnsortedLinkedList();
+    LinkedList();
+    ~LinkedList();
 
     int GetLength();
     int GetCurrentIndex();
@@ -25,6 +26,9 @@ public:
     void PrintList();
     void ResetList();
     void GetSuccessiveNodes(T&);
+    void SortList();
 
 };
-#endif // UNSORTEDLINKEDLIST_H_INCLUDED
+
+
+#endif // LINKEDLIST_H_INCLUDED

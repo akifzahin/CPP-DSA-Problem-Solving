@@ -1,6 +1,6 @@
-#include "unsortedListArray.h"
+#include "ListArray.h"
 template <class T>
-UnsortedListArray<T>::UnsortedListArray()
+ListArray<T>::ListArray()
 {
 
 

@@ -26,6 +26,14 @@ int main()
        cin>>circularArr[i];
    }
     int startIndex = 4;
-    printArray(circularArr,n,startIndex);
+    //printArray(circularArr,n,startIndex);
+    for(int i=1; i<=n; i++)
+   {
+        cout<<circularArr[i%n];
+   }
+
+
+
+
 }
 

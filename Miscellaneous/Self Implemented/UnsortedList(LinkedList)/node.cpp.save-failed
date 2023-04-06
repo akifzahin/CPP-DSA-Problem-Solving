@@ -1,14 +1,11 @@
 #include "node.h"
-#include <bits/stdc++.h>
-using namespace std;
-
 template <class T>
-Node<T>::Node(T data)
+Node::Node(T data, T* next)
 {
     this->data = data;
-    next = new T;
+    this->*next = *next;
 }
-void Node<T>::PrintNode()
+void Node::PrintNode()
 {
     cout<<"Data: "<<data<<"\nNext* = "<<*next;
 }

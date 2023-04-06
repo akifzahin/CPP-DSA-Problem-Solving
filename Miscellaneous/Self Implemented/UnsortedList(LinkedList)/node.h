@@ -3,8 +3,13 @@
 template <class T>
 class Node
 {
+private:
     T data;
     Node<T>* next;
+public:
+    Node(T,T*);
+    ~Node();
+    void PrintNode();
 };
 
 

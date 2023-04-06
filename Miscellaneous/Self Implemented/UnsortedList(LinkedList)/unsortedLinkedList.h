@@ -14,14 +14,17 @@ public:
     UnsortedLinkedList();
     ~UnsortedLinkedList();
 
-    void FullCheck();
-    void EmptyCheck();
+    int GetLength();
+    int GetCurrentIndex();
+    bool FullCheck();
+    bool EmptyCheck();
     void InsertNode(int,T);
-    void DeleteNode(int,T);
+    void DeleteNode(T);
     void GetNode(int,T);
     void ReverseList();
     void PrintList();
     void ResetList();
+    void GetSuccessiveNodes(T&);
 
 };
 #endif // UNSORTEDLINKEDLIST_H_INCLUDED

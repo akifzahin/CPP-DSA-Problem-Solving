@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="stack.cpp" />
+		<Unit filename="stack.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

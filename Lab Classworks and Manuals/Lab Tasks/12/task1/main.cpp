@@ -89,7 +89,7 @@ int main()
          stack2.Pop();
 
     }
-
+    cout<<"\n";
      cout<<"Is stack full?:  ";
     if(stack1.IsFull()==1)
     {

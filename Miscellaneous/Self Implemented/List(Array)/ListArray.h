@@ -14,19 +14,24 @@ public:
     ListArray();
     ~ListArray();
 
-    void GetElement(T&);
-    int GetElementIndex(T&);
+    void GetElementByIndex(T&,int);
+    void GetElementByValue(T&);
+    int GetElementIndex(T);
     int GetLength();
     int GetCurrentIndex();
-    void InsertElement(T);
-    void RemoveElement(T);
-    void ReverseList();
+    void ResetCurrentIndex();
     bool CheckFull();
     bool CheckEmpty();
     void MakeEmpty();
-
+    void InsertElementByValue(T);
+    void InsertElementByIndex(int);
+    void RemoveElementByValue(T);
+    void RemoveElementByIndex(int);
+    void SortList();
+    void ReverseList();
+    void IterateList(T&);
     void SumList();
-   ListArray operator+(UnsortedListArray);
+
 
 
 

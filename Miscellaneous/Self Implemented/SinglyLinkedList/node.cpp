@@ -6,7 +6,7 @@ template <class T>
 Node<T>::Node(T data)
 {
     this->data = data;
-    next = new T;
+    this->next = NULL;
 }
 void Node<T>::PrintNode()
 {

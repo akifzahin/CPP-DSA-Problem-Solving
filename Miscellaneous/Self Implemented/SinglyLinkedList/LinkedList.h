@@ -17,15 +17,16 @@ public:
 
     int GetLength();
     int GetCurrentIndex();
-    bool FullCheck();
-    bool EmptyCheck();
+    void GetHeadAddress();
+    void GetNode(int,T);
+    bool CheckFull();
+    bool CheckEmpty();
     void InsertNode(int,T);
     void DeleteNode(T);
-    void GetNode(int,T);
     void ReverseList();
     void PrintList();
-    void ResetList();
-    void GetSuccessiveNodes(T&);
+    void ResetCurrentIndex();
+    void IterateNodes(T&);
     void SortList();
 
 };

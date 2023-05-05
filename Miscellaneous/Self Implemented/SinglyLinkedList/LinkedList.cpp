@@ -1,13 +1,15 @@
 #include "LinkedList.h"
+#include "node.h"
 #include <bits/stdc++.h>
 using namespace std;
 
 template <class T>
-LinkedList<T>::UnsortedLinkedList()
+LinkedList<T>::LinkedList()
 {
-    lengthOfList = 0;
-    currentIndex = -1;
     head = NULL;
+    lengthOfList=-1;
+    currentIndex=-1;
+
 }
 
 template <class T>
@@ -21,78 +23,36 @@ int LinkedList<T>::GetCurrentIndex()
 {
     return currentIndex;
 }
-
 template <class T>
-bool LinkedList<T>::FullCheck()
+Node* LinkedList<T>::GetHeadAddress()
 {
-    bool created;
+    return head;
+}
+template <class T>
+bool LinkedList<T>::CheckFull()
+{
+    bool full;
     Node<T>* temp;
     try
     {
         temp = new Node<T>;
         delete temp;
-        created = false;
+        full = false;
+
     }
-    catch(bad_alloc& ex)
-    {
-        created = true;
-    }
-    return created;
+    catch(bad_alloc)
 }
 
 template <class T>
-bool LinkedList<T>::EmptyCheck()
+bool LinkedList<T>::CheckEmpty()
 {
-    return (head == NULL);
+
 }
 
 template <class T>
 void LinkedList<T>::InsertNode(int index,T value)
 {
-//    Node<T>* temp = new Node<T>;
-//    if(index<0)
-//    {
-//        cout<<"Index cannot be less than 0!";
-//
-//    }
-//    else
-//    {
-//        temp.data = value;
-//        temp.next = head;
-//        head = temp;
-//        currentIndex++;
-//        length++
-//    }
-    if (index < 0)
-    {
-        return NULL;
-    }
-    int currIndex	=	1;
-    Node<T>* currNode	=	head;
-    while (currNode && index > currIndex)
-    {
-        currNode	=	currNode->next;
-        currIndex++;
-    }
-    if (index > 0 && currNode == NULL)
-    {
-         return NULL;
-    }
 
-
-    Node<T>* newNode	=	new	Node<T>;
-    newNode->data	=	x;
-    if (index == 0)
-    {
-        newNode->next	=	head;
-        head		=	newNode;
-    }
-    else
-    {
-        newNode->next	=	currNode->next;
-        currNode->next	=	newNode;
-    }
-    return newNode;
 
 }
 template <class T>

@@ -9,19 +9,19 @@ template<class ItemType>
 class QueType
 {
 public:
-QueType();
-QueType(int max);
-~QueType();
-void MakeEmpty();
-bool IsEmpty();
-bool IsFull();
-void Enqueue(ItemType);
-void Dequeue(ItemType&);
+    QueType();
+    QueType(int max);
+    ~QueType();
+    void MakeEmpty();
+    bool IsEmpty();
+    bool IsFull();
+    void Enqueue(ItemType);
+    void Dequeue(ItemType&);
 private:
-int front;
-int rear;
-ItemType* items;
-int maxQue;
+    int front;
+    int rear;
+    ItemType* items;
+    int maxQue;
 };
 
 #endif // QUETYPE_H_INCLUDED

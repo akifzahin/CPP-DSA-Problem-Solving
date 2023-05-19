@@ -1,78 +1,103 @@
 #include "LinkedList.h"
-#include "node.h"
 #include <bits/stdc++.h>
 using namespace std;
 
-template <class T>
-LinkedList<T>::LinkedList()
+
+LinkedList::LinkedList()
 {
     head = NULL;
     lengthOfList=-1;
-    currentIndex=-1;
+    currentIndex=NULL;
 
 }
 
-template <class T>
-int LinkedList<T>::GetLength()
+
+int LinkedList::GetLength()
 {
     return lengthOfList;
 }
 
-template <class T>
-int LinkedList<T>::GetCurrentIndex()
+
+Node* LinkedList::GetCurrentIndex()
 {
-    return currentIndex;
+    return currentPosition;
 }
-template <class T>
-Node* LinkedList<T>::GetHeadAddress()
+
+Node* LinkedList::GetHeadAddress()
 {
     return head;
 }
-template <class T>
-bool LinkedList<T>::CheckFull()
+
+bool LinkedList::CheckFull()
 {
     bool full;
-    Node<T>* temp;
+
     try
     {
-        temp = new Node<T>;
+        temp = new Node;
         delete temp;
         full = false;
 
     }
-    catch(bad_alloc)
+    catch(bad_alloc &ex)
+    {
+        full = true;
+    }
+    return full;
 }
 
-template <class T>
-bool LinkedList<T>::CheckEmpty()
+
+bool LinkedList::CheckEmpty()
+{
+    return (lengthOfList==0);
+}
+
+
+void LinkedList::InsertNode(int index,int value)
+{
+    bool full = CheckFull();
+    int length = GetLength();
+    if(full == true)
+    {
+        cout<<"LinkedList Full!";
+    }
+    else if(full == false && index==0)
+    {
+        Node* node = new Node;
+
+        node->data = value;
+        node->next = head;
+
+        head = node;
+        lengthOfList++;
+    }
+    else if(full == false && index>0)
+    {
+
+    }
+
+}
+
+void LinkedList::DeleteNode(T value)
 {
 
 }
 
-template <class T>
-void LinkedList<T>::InsertNode(int index,T value)
-{
 
-
-}
-template <class T>
-void LinkedList<T>::DeleteNode(T value)
-{
-
-}
-
-template <class T>
 void GetNode(int,T);
 
-template <class T>
+
 void ReverseList();
 
-template <class T>
-void PrintList();
 
-template <class T>
+void PrintList()
+{
+
+}
+
+
 void ResetList();
 
-template <class T>
+
 void GetSuccessiveNodes(T&);
 

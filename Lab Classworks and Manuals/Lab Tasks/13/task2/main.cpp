@@ -30,6 +30,6 @@ int main()
    cout<<"Enter n: ";
    cin>>n;
 
-    BinaryQueue(n);
+    //BinaryQueue(n);
 
 }

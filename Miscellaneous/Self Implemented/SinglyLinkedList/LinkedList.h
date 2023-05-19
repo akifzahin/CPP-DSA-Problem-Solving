@@ -1,16 +1,20 @@
 #ifndef LINKEDLIST_H_INCLUDED
 #define LINKEDLIST_H_INCLUDED
-#include "node.h"
+//Uses only integers (for now)
+struct Node
+{
+    int data;
+    Node* next;
+};
 
-template <class T>
+
 class LinkedList
 {
 
-
 private:
-    Node<T>* head;
+    Node* head;
     int lengthOfList;
-    int currentIndex;
+    Node* currentPosition;
 public:
     LinkedList();
     ~LinkedList();
